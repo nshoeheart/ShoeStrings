@@ -1,0 +1,14 @@
+<div id="alert-container" class="container">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>">
+      <%= message %>
+      <span id="remove-alert" class="pull-right glyphicon glyphicon-remove cursor-pointer"></span>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $('#remove-alert').click(function() {
+      $('#alert-container').hide();
+  });
+</script>
